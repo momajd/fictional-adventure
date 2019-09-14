@@ -66,3 +66,14 @@
   background-size: cover;
   padding: 0;
 }
+
+.social a {
+    text-align: center;
+    height: 3rem;
+    width: 3rem;
+    background: #6c757d!important;
+    border-radius: 100%;
+    line-height: 3rem;
+    color: rgba(255,255,255,.3);
+    color: #FFFFFF!important;
+}
