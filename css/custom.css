@@ -2,6 +2,11 @@
   color: #2c3e50 !important;
 }
 
+.masthead h1 {
+  letter-spacing: .8rem;
+  font-family: "Montserrat";
+}
+
 .font-colored {
   color: #2c3e50 !important;
 }
