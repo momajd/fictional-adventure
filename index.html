@@ -291,16 +291,27 @@
           </div>
           <h2 class="font-colored">
             <span class="strikethrough">$49.99</span>
-            <span class="reduced-price-text">$39.99</span>
+            <span class="reduced-price-text">$19.99</span>
             <small class="text-muted">+tax</small>
           </h2>
           <h2 class="reduced-price-text">Reduced price this month!</h2>
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="mb-2">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="2VAJ5TLHWYX2A">
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-          </form>
+
+          <div class="container">
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="2VAJ5TLHWYX2A">
+              <div class="form-group">
+                <select name="os0" class="form-control">
+                  <option value="Basic">Basic $19.99 USD</option>
+                  <option value="Basic With Tire And Plastics Shine">Basic With Tire & Plastics Shine $29.99 USD</option>
+                </select> </td></tr>
+              </div>
+
+              <input type="hidden" name="currency_code" value="USD">
+              <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+              <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
+          </div>
         </div>
 
         <div class="card">
@@ -327,6 +338,9 @@
             <p class="card-text">
               <i class="fas fa-check"></i> Interior Window Cleaning
             </p>
+            <p class="card-text">
+              <i class="fas fa-check"></i> Tire & Plastic Shine
+            </p>
 
             <p class="text-muted">(Note that we need to borrow your keys for Phine Deluxe)</p>
 
@@ -334,9 +348,16 @@
           <h2 class="font-colored">
             $99.99 <small class="text-muted">+tax</small>
           </h2>
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="mb-2">
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input type="hidden" name="cmd" value="_s-xclick">
             <input type="hidden" name="hosted_button_id" value="AWZAVU7Z88SLE">
+            <div class="form-group">
+              <select name="os0" class="form-control">
+                <option value="Deluxe">Deluxe $99.99 USD</option>
+                <option value="Deluxe With Leather And Odor Treatment">Deluxe With Leather And Odor Treatment $119.99 USD</option>
+              </select>
+            </div>
+            <input type="hidden" name="currency_code" value="USD">
             <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
             <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
           </form>
