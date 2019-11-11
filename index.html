@@ -74,6 +74,7 @@
     <div class="container h-100">
       <div class="row h-100 align-items-center justify-content-center text-center">
         <div class="col-lg-10 align-self-end">
+          <img src="img/Phine Logo Master with halo.png" alt="" width="600">
           <h1 class="text-white font-weight-bold text-uppercase">
             Mobile Car Wash
           </h1>
@@ -110,8 +111,9 @@
 
   <section>
     <div class="container text-center mt-5">
-      <img class="my-5" src="img/Phine Logo Master.png" alt="" width="288">
-      <h3 color="#2a2a2a">SAVING WATER WITH EVERY WASH</h3>
+      <!-- <img class="my-5" src="img/Phine Logo Master.png" alt="" width="288"> -->
+      <h1 class="font-colored" id="water-saved">22,000</h1>
+      <h3 class="font-colored">GALLONS OF WATER SAVED</h3>
       <p class="text-muted">Saves average of 100 gallons of water with every wash</p>
       <div class="embed-responsive embed-responsive-16by9">
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zcV7ccpXZ6o" allowfullscreen></iframe>
@@ -283,6 +285,9 @@
 
       <script src="//simplybook.me/v2/widget/widget.js"></script>
       <script>var widget = new SimplybookWidget({"widget_type":"iframe","url":"https:\/\/ebbymajdyahoocom.simplybook.me","theme":"space","theme_settings":{"sb_base_color":"#d42853","timeline_show_end_time":"0","timeline_modern_display":"as_slots","display_item_mode":"list","dark_font_color":"#474747","light_font_color":"#ffffff","sb_company_label_color":"#ffffff","hide_img_mode":"0","show_sidebar":"1","sb_busy":"#dad2ce","sb_available":"#d3e0f1"},"timeline":"modern","datepicker":"top_calendar","is_rtl":false,"app_config":{"predefined":[]}});</script>
+
+      <script src="//simplybook.me/v2/widget/widget.js"></script>
+      <script>var widget = new SimplybookWidget({"widget_type":"iframe","url":"https:\/\/ebbymajdyahoocom.simplybook.me","theme":"space", "navigate":"gift-card", "theme_settings":{"sb_base_color":"#d42853","timeline_show_end_time":"0","timeline_modern_display":"as_slots","display_item_mode":"block","dark_font_color":"#474747","light_font_color":"#ffffff","sb_company_label_color":"#ffffff","hide_img_mode":"0","show_sidebar":"1","sb_busy":"#dad2ce","sb_available":"#d3e0f1"},"timeline":"modern_week","datepicker":"top_calendar","is_rtl":false,"app_config":{"predefined":[]}});</script>
 
       <!-- <div class="card-deck">
         <div class="card">
@@ -575,6 +580,39 @@
     })();
   </script>
   <!--End of Tawk.to Script-->
+
+  <script type="text/javascript">
+
+    function animateWaterSaved() {
+      let el = document.getElementById("water-saved");
+      if (el.textContent === "21,600") {return; }
+
+      for(let number = 0; number <= 21600; number += 100) {
+        setTimeout(function () {
+          el.textContent = number.toLocaleString(); //adds commas
+        }, number/5);
+      };
+    }
+
+    let scrolled = false;
+
+    document.addEventListener('scroll', function (event) {
+      // https://stackoverflow.com/questions/4096863/how-to-get-and-set-the-current-web-page-scroll-position
+
+      let position = document.documentElement.scrollTop || document.body.scrollTop;
+      if ( (position > 700 || position < 800) && !scrolled ) {
+        scrolled = true;
+        animateWaterSaved();
+      }
+
+
+
+      console.log(document.documentElement.scrollTop || document.body.scrollTop);
+    });
+
+
+
+  </script>
 
 </body>
 
