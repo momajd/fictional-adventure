@@ -70,7 +70,7 @@
   </nav>
 
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="covid-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -93,17 +93,6 @@
       </div>
     </div>
   </div>
-
-  <script type="text/javascript">
-    let messageShown = false;
-
-    window.addEventListener("scroll", function () {
-      if (!messageShown) {
-        $('#exampleModal').modal('show');
-        messageShown = true;
-      }
-    });
-  </script>
 
   <!-- Masthead -->
   <header class="masthead">
@@ -339,11 +328,11 @@
         <a href="#contact" class="js-scroll-trigger">Contact Us</a> for fleet and corporate/group pricing!
       </h4>
 
-      <script src="//simplybook.me/v2/widget/widget.js"></script>
+      <!-- <script src="//simplybook.me/v2/widget/widget.js"></script>
       <script>var widget = new SimplybookWidget({"widget_type":"iframe","url":"https:\/\/ebbymajdyahoocom.simplybook.me","theme":"space","theme_settings":{"sb_base_color":"#d42853","timeline_show_end_time":"0","timeline_modern_display":"as_slots","display_item_mode":"list","dark_font_color":"#474747","light_font_color":"#ffffff","sb_company_label_color":"#ffffff","hide_img_mode":"0","show_sidebar":"1","sb_busy":"#dad2ce","sb_available":"#d3e0f1"},"timeline":"modern","datepicker":"top_calendar","is_rtl":false,"app_config":{"predefined":[]}});</script>
 
       <script src="//simplybook.me/v2/widget/widget.js"></script>
-      <script>var widget = new SimplybookWidget({"widget_type":"iframe","url":"https:\/\/ebbymajdyahoocom.simplybook.me","theme":"space", "navigate":"gift-card", "theme_settings":{"sb_base_color":"#d42853","timeline_show_end_time":"0","timeline_modern_display":"as_slots","display_item_mode":"block","dark_font_color":"#474747","light_font_color":"#ffffff","sb_company_label_color":"#ffffff","hide_img_mode":"0","show_sidebar":"1","sb_busy":"#dad2ce","sb_available":"#d3e0f1"},"timeline":"modern_week","datepicker":"top_calendar","is_rtl":false,"app_config":{"predefined":[]}});</script>
+      <script>var widget = new SimplybookWidget({"widget_type":"iframe","url":"https:\/\/ebbymajdyahoocom.simplybook.me","theme":"space", "navigate":"gift-card", "theme_settings":{"sb_base_color":"#d42853","timeline_show_end_time":"0","timeline_modern_display":"as_slots","display_item_mode":"block","dark_font_color":"#474747","light_font_color":"#ffffff","sb_company_label_color":"#ffffff","hide_img_mode":"0","show_sidebar":"1","sb_busy":"#dad2ce","sb_available":"#d3e0f1"},"timeline":"modern_week","datepicker":"top_calendar","is_rtl":false,"app_config":{"predefined":[]}});</script> -->
 
       <!-- <div class="card-deck">
         <div class="card">
@@ -628,7 +617,7 @@
   </script> -->
 
   <!--Start of Tawk.to Script-->
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
     var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
@@ -638,7 +627,7 @@
     s1.setAttribute('crossorigin','*');
     s0.parentNode.insertBefore(s1,s0);
     })();
-  </script>
+  </script> -->
   <!--End of Tawk.to Script-->
 
   <script type="text/javascript">
@@ -659,15 +648,17 @@
     document.addEventListener('scroll', function (event) {
       // https://stackoverflow.com/questions/4096863/how-to-get-and-set-the-current-web-page-scroll-position
 
+      if (!scrolled) {
+        console.log("test");
+        $('#covid-modal').modal('show');
+      }
+
       let position = document.documentElement.scrollTop || document.body.scrollTop;
       if ( (position > 700 || position < 800) && !scrolled ) {
         scrolled = true;
         animateWaterSaved();
       }
-
     });
-
-
 
   </script>
 
